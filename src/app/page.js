@@ -11,10 +11,9 @@ const HomePage = async () => {
   console.log(products);
   return (
     <main>
-      <h1>Product List</h1>
       <Header />
       <CategoryList />
-      <CategoryHeader  />
+      <CategoryHeader />
       <ProductCard products={products} />
     </main>
   );
