@@ -6,15 +6,15 @@ import ProductCard from "@/components/ProductCard";
 import axios from "axios";
 
 const HomePage = async () => {
-  const response = await axios.get("https://fakestoreapi.com/products ");
-  const products = response.data;
-  console.log(products);
+  // const response = await axios.get("https://fakestoreapi.com/products ");
+  // const products = response.data;
+  // console.log(products);
   return (
     <main>
       <Header />
       <CategoryList />
       <CategoryHeader />
-      <ProductCard products={products} />
+      <ProductCard  />
     </main>
   );
 };  
