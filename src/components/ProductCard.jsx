@@ -19,7 +19,7 @@ export default function ProductCard() {
       } catch (error) {
         setProducts([]); // fallback to empty list
       }
-    }
+    },[]
 )
 
     return (
