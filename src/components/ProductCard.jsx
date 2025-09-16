@@ -1,9 +1,21 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Image from 'next/image';
+import axios from 'axios
 
-export default function ProductCard(props) {
 
-    console.log(props.products)
+export default function ProductCard() {
+    const [products,setProducts]=useState([])
+
+    function async fetchData(){
+        const data= await axios.get("https://fakestoreapi.com/products");
+        setProducts(data.data)
+    }
+    
+useEffect(()=>{
+    fetchData()
+},[]
+)
+
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  m-6 mx-auto max-w-[1280px] gap-6">
             {props.products.map((image, index) => (
