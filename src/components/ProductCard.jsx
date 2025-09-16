@@ -1,19 +1,25 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Image from 'next/image';
 import axios from 'axios'
 
 
 export default function ProductCard() {
-    const [products,setProducts]=useState([])
+ const [products, setProducts] = useState([]);
 
-    function async fetchData(){
-        const data= await axios.get("https://fakestoreapi.com/products");
-        setProducts(data.data)
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get("https://fakestoreapi.com/products", {
+          headers: {
+            "User-Agent": "Mozilla/5.0 (compatible; MyApp/1.0)",
+            Accept: "application/json",
+          },
+        });
+        setProducts(response.data);
+      } catch (error) {
+        setProducts([]); // fallback to empty list
+      }
     }
-    
-useEffect(()=>{
-    fetchData()
-},[]
 )
 
     return (
