@@ -17,10 +17,12 @@ export default function ProductCard() {
         });
         setProducts(response.data);
       } catch (error) {
-        setProducts([]); // fallback to empty list
+        setProducts([]);
       }
-    },[]
-)
+    }
+
+    fetchData();
+  }, []);
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  m-6 mx-auto max-w-[1280px] gap-6">
