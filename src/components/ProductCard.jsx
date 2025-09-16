@@ -18,7 +18,7 @@ useEffect(()=>{
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  m-6 mx-auto max-w-[1280px] gap-6">
-            {props.products.map((image, index) => (
+            {products.map((image, index) => (
                 <div key={index} className="flex flex-col rounded-md relative">
                     <img
                         src={image.image}
