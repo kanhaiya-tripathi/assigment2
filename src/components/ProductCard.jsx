@@ -13,7 +13,7 @@ export default function ProductCard(props) {
                         alt={image.title}
                         // width={280}
                         // height={375}
-                        className="rounded-tl-lg rounded-tr-md h-[250px] "
+                        className="rounded-tl-lg rounded-tr-md h-[300px] "
                     />
                     <Image src="/images/bookmark-1.png" height={34} width={26} alt={"bookmark"} className="absolute top-4 right-4 text-[#E5DFD9] cursor-pointer" />
                     <p className="flex items-center  tracking-[0.8px] text-[#E5DFD9] mt-2">{image.title}</p>
